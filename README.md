@@ -1,6 +1,7 @@
 # ROS2_tutorial
 
 ## First Example
+### Directory
 * (your workspace)
   * ㄴbuild
   * ㄴinstall
@@ -27,3 +28,13 @@
         * ㄴ __init__.py
         * ㄴ [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py)
         * ㄴ [cmd_vel_subscriber.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py)
+
+### Requirements
+Ubuntu 18.04, ROS2 dashing version
+to see results, follow below at your workspace:
+
+```
+ros2 run turtlesim turtlesim_node
+ros2 run my_first_ros2_pkg cmd_vel_publisher -r 2 -v 2 -c 1
+ros2 run my_first_ros2_pkg cmd_vel_subscriber 
+```
