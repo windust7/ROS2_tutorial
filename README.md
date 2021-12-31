@@ -69,5 +69,11 @@ ros2 run turtlesim turtlesim_node
 ros2 run my_first_ros2_pkg cmd_vel_publisher -r 2 -v 2 -c 1
 ros2 run my_first_ros2_pkg cmd_vel_subscriber 
 ```
+To run launch file, follow below:
+
+```
+cd ~/(your workspace)/src/my_first_ros2_pkg/launch
+ros2 launch cmd_to_twist.launch.py
+```
 ![image](https://user-images.githubusercontent.com/62916482/147823667-9a4676db-a879-4948-ab2e-194bf2208e8a.png)
 
