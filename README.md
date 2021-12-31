@@ -59,7 +59,7 @@ Make [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/c
 cd ~/(your workspace)
 colcon build --symlink-install --packages-select msg_interface_example
 colcon build --symlink-install --packages-select my_first_ros2_pkg
-. ~/(your workspace)/install/local_setup.bash
+. ~/(your workspace)/src/install/local_setup.bash
 ```
 
 Follow below at different terminal window:
