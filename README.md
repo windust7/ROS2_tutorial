@@ -69,5 +69,5 @@ ros2 run turtlesim turtlesim_node
 ros2 run my_first_ros2_pkg cmd_vel_publisher -r 2 -v 2 -c 1
 ros2 run my_first_ros2_pkg cmd_vel_subscriber 
 ```
+![image](https://user-images.githubusercontent.com/62916482/147823667-9a4676db-a879-4948-ab2e-194bf2208e8a.png)
 
-file:///home/windust7/MLCS/AIracing/ROS/ROS2/rosgraph.png![image](https://user-images.githubusercontent.com/62916482/147823649-d982d1bb-0e6b-4e23-b482-07cfa9613d64.png)
