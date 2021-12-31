@@ -62,7 +62,7 @@ colcon build --symlink-install --packages-select my_first_ros2_pkg
 . ~/(your workspace)/src/install/local_setup.bash
 ```
 
-Follow below at different terminal window:
+Follow below at different terminal window(r means radius, v means linear velocity, c means counterclockwise(1) or clockwise(0) direction:
 
 ```
 ros2 run turtlesim turtlesim_node
