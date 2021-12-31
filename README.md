@@ -1,4 +1,4 @@
-# ROS2_tutorial
+# ROS_tutorial
 
 ## First Example
 ### Directory
