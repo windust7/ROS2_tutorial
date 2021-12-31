@@ -46,7 +46,7 @@ Change [CMakeLists.txt](https://github.com/windust7/ROS_tutorial/blob/main/CMake
 Make [UniformCircularVel.msg](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) files
 ```
 cd ~/(your workspace)/src/
-$ ros2 pkg create my_first_ros2_pkg --build-type ament_python --dependencies rclpy std_msgs
+ros2 pkg create my_first_ros2_pkg --build-type ament_python --dependencies rclpy std_msgs
 ```
 Change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20my_first_ros2_pkg).xml)
 
