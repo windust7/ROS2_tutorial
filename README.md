@@ -22,7 +22,7 @@
       * ㄴsetup.cfg
       * ㄴ[setup.py](https://github.com/windust7/ROS_tutorial/blob/main/setup(for%20my_first_ros2_pkg).py)
       * ㄴlaunch
-       * ㄴ[cmd_to_twist.launch.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)
+        * ㄴ[cmd_to_twist.launch.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)
       * ㄴresource
       * ㄴtest
       * ㄴmy_first_ros2_pkg
