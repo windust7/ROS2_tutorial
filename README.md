@@ -54,7 +54,7 @@ Change [setup.py](https://github.com/windust7/ROS_tutorial/blob/main/setup(for%2
 
 Make [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) and [cmd_vel_subscriber.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) files
 
-Follow below at your workspace:
+Follow below at different terminal window:
 
 ```
 ros2 run turtlesim turtlesim_node
