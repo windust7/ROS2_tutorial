@@ -9,6 +9,8 @@ from rclpy.qos import QoSHistoryPolicy
 from rclpy.qos import QoSProfile
 from rclpy.qos import QoSReliabilityPolicy
 
+_eps = 1e-7
+
 class CmdVelSubscriber(Node):
     def __init__(self):
         super().__init__('cmd_vel_subscriber')
@@ -64,7 +66,7 @@ class CmdVelSubscriber(Node):
         self.twist = Twist()
 
         self.lin_x = self.lin_vel if self.cwdirection == True else -(self.lin_vel)
-        self.ang_z = (self.lin_x / self.radius) if self.cwdirection == True else -(self.lin_x / self.radius)
+        self.ang_z = (self.lin_x / (self.radius + _eps)) if self.cwdirection == True else -(self.lin_x / (self.radius + _eps))
 
         self.lin_vec.x, self.lin_vec.y, self.lin_vec.z = self.lin_x, self.lin_y, self.lin_z
         self.ang_vec.x, self.ang_vec.y, self.ang_vec.z = self.ang_x, self.ang_y, self.ang_z
