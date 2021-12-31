@@ -43,7 +43,6 @@ Then make [UniformCircularVel.msg](https://github.com/windust7/ROS_tutorial/blob
 ```
 cd ~/(your workspace)/src/
 $ ros2 pkg create my_first_ros2_pkg --build-type ament_python --dependencies rclpy std_msgs
-
 ```
 Then change [package.xml]()
 
