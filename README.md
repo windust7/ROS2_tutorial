@@ -39,22 +39,22 @@ ros2 pkg create --build-type ament_cmake msg_interface_example
 cd msg_interface_example
 mkdir msg
 ```
-Then change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20msg%20interface).xml)
+Change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20msg%20interface).xml)
 
-Then change [CMakeLists.txt](https://github.com/windust7/ROS_tutorial/blob/main/CMakeLists(for%20msg%20interface).txt)
+Change [CMakeLists.txt](https://github.com/windust7/ROS_tutorial/blob/main/CMakeLists(for%20msg%20interface).txt)
 
-Then make [UniformCircularVel.msg](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) files
+Make [UniformCircularVel.msg](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) files
 ```
 cd ~/(your workspace)/src/
 $ ros2 pkg create my_first_ros2_pkg --build-type ament_python --dependencies rclpy std_msgs
 ```
-Then change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20my_first_ros2_pkg).xml)
+Change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20my_first_ros2_pkg).xml)
 
-Then change [setup.py](https://github.com/windust7/ROS_tutorial/blob/main/setup(for%20my_first_ros2_pkg).py)
+Change [setup.py](https://github.com/windust7/ROS_tutorial/blob/main/setup(for%20my_first_ros2_pkg).py)
 
-Then make [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) and [cmd_vel_subscriber.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) files
+Make [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) and [cmd_vel_subscriber.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) files
 
-Then follow below at your workspace:
+Follow below at your workspace:
 
 ```
 ros2 run turtlesim turtlesim_node
