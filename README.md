@@ -10,7 +10,7 @@ Then ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/c
 
 [Launch file](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py) includes ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node and ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node.
 
-Looks like some notations are needed to be corrected,, We give ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) topic information to ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node, not "turtle1/cmd_vel" topic.
+Looks like some notations are needed to be corrected,, ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node publishes ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) topic to ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node, not "turtle1/cmd_vel" topic.
 
 ### Directory
 * (your workspace)
