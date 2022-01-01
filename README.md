@@ -12,9 +12,9 @@ Then ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/c
 
 Looks like some notations are needed to be corrected,, 
 
-["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node publishes ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) topic to ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node, not "turtle1/cmd_vel" topic. 
+  * ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node publishes ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) topic to ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node, not "turtle1/cmd_vel" topic. 
 
-And [Launch file](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)'s name is also incorrect. "turtle1/cmd_vel" topic is "geometry_msgs/msg/Twist" type.
+  * And [Launch file](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)'s name is also incorrect. "turtle1/cmd_vel" topic is "geometry_msgs/msg/Twist" type.
 
 ### Directory
 * (your workspace)
