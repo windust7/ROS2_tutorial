@@ -6,17 +6,11 @@
 ![image](https://user-images.githubusercontent.com/62916482/148050467-6a40bf14-ede7-4356-9f53-fccba759aed9.png)
 
 
-We give radius, linear velocity and direction of turtle's trajectory(uniform circular) to ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node. Default values are 1.0, 2.0 and clockwise direction.
+We give radius, linear velocity and direction of turtle's trajectory(uniform circular) to ["/rvd_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/uniform_circle_turtle/uniform_circle_turtle/rvd_publisher.py) node.
 
-Then ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node publishs ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) topic msg to ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node. This node transforms ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) to "/turtle1/cmd_vel" topic("geometry_msgs/msg/Twist" type) and publishs to "/turtlesim" node.
+Then ["/rvd_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/uniform_circle_turtle/uniform_circle_turtle/rvd_publisher.py) node publishs ["/RVD"](https://github.com/windust7/ROS_tutorial/blob/main/rvd_msg_example/msg/RVD.msg) topic msg to ["/rvd_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/uniform_circle_turtle/uniform_circle_turtle/rvd_subscriber.py) node. This node transforms ["/RVD"](https://github.com/windust7/ROS_tutorial/blob/main/rvd_msg_example/msg/RVD.msg) to "/turtle1/cmd_vel" topic("geometry_msgs/msg/Twist" type) and publishs to "/turtlesim" node.
 
-[Launch file](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py) includes ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node and ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node.
-
-Looks like some notations are needed to be corrected,, 
-
-  * ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node publishes ["/uniform_circular_velocity"](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) topic to ["/cmd_vel_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) node, not "/turtle1/cmd_vel" topic. 
-
-  * [Launch file](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)'s name is also incorrect. "/turtle1/cmd_vel" topic is "geometry_msgs/msg/Twist" type.
+[Launch file](https://github.com/windust7/ROS_tutorial/blob/main/uniform_circle_turtle/launch/rvd_to_twist.launch.py) includes ["/rvd_subscriber"](https://github.com/windust7/ROS_tutorial/blob/main/uniform_circle_turtle/uniform_circle_turtle/rvd_subscriber.py) node and turtlesim_node (turtlesim package).
 
 ### Requirements
 Ubuntu 18.04, ROS2 dashing version
