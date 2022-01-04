@@ -2,7 +2,9 @@
 
 ## First Example
 ### Brief Description
-![image](https://user-images.githubusercontent.com/62916482/147823667-9a4676db-a879-4948-ab2e-194bf2208e8a.png)
+![image](https://user-images.githubusercontent.com/62916482/148050456-924a0ab0-9360-4029-925f-c9c4e5a7deba.png)
+![image](https://user-images.githubusercontent.com/62916482/148050467-6a40bf14-ede7-4356-9f53-fccba759aed9.png)
+
 
 We give radius, linear velocity and direction of turtle's trajectory(uniform circular) to ["/cmd_vel_publisher"](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) node. Default values are 1.0, 2.0 and clockwise direction.
 
@@ -16,82 +18,31 @@ Looks like some notations are needed to be corrected,,
 
   * [Launch file](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)'s name is also incorrect. "/turtle1/cmd_vel" topic is "geometry_msgs/msg/Twist" type.
 
-### Directory
-* (your workspace)
-  * ㄴbuild
-  * ㄴinstall
-  * ㄴlog
-  * ㄴsrc
-    * ㄴbuild
-    * ㄴinstall
-    * ㄴlog
-    * ㄴmsg_interface_example
-      * ㄴ[CMakeLists.txt](https://github.com/windust7/ROS_tutorial/blob/main/CMakeLists(for%20msg%20interface).txt)
-      * ㄴ[package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20msg%20interface).xml)
-      * ㄴinclude
-      * ㄴsrc
-      * ㄴmsg
-        * ㄴ[UniformCircularVel.msg](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg)
-    * ㄴmy_first_ros2_pkg
-      * ㄴ[package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20my_first_ros2_pkg).xml)
-      * ㄴsetup.cfg
-      * ㄴ[setup.py](https://github.com/windust7/ROS_tutorial/blob/main/setup(for%20my_first_ros2_pkg).py)
-      * ㄴlaunch
-        * ㄴ[cmd_to_twist.launch.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py)
-      * ㄴresource
-      * ㄴtest
-      * ㄴmy_first_ros2_pkg
-        * ㄴ ```__init__.py```
-        * ㄴ [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py)
-        * ㄴ [cmd_vel_subscriber.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py)
-
 ### Requirements
 Ubuntu 18.04, ROS2 dashing version
 
 To see results, follow:
 ```
-cd ~/(your workspace)/src
-ros2 pkg create --build-type ament_cmake msg_interface_example
-cd msg_interface_example
-mkdir msg
+git clone https://github.com/windust7/ROS_tutorial
 ```
-Change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20msg%20interface).xml) file
-
-Change [CMakeLists.txt](https://github.com/windust7/ROS_tutorial/blob/main/CMakeLists(for%20msg%20interface).txt) file
-
-Make [UniformCircularVel.msg](https://github.com/windust7/ROS_tutorial/blob/main/UniformCircularVel.msg) file
-```
-cd ~/(your workspace)/src/
-ros2 pkg create my_first_ros2_pkg --build-type ament_python --dependencies rclpy std_msgs
-```
-Change [package.xml](https://github.com/windust7/ROS_tutorial/blob/main/package(for%20my_first_ros2_pkg).xml) file
-
-Change [setup.py](https://github.com/windust7/ROS_tutorial/blob/main/setup(for%20my_first_ros2_pkg).py) file
-
-Make [cmd_vel_publisher.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_publisher.py) and [cmd_vel_subscriber.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_vel_subscriber.py) file
-
-Make [cmd_to_twist.launch.py](https://github.com/windust7/ROS_tutorial/blob/main/cmd_to_twist.launch.py) file
-
+Move rvd_msg_example and uniform_circle_turtle folders to src folder(which is at your workspace)
 
 ```
 cd ~/(your workspace)
-colcon build --symlink-install --packages-select msg_interface_example
-colcon build --symlink-install --packages-select my_first_ros2_pkg
-. ~/(your workspace)/src/install/local_setup.bash
+colcon build --symlink-install --packages-select rvd_msg_example
+colcon build --symlink-install --packages-select uniform_circle_turtle
+. ~/(your workspace)/install/local_setup.bash
 ```
-
-Follow below at different terminal window(r means radius, v means linear velocity, c means counterclockwise(1) or clockwise(0) direction:
-
+To run each nodes, follow below at different terminal window(r means radius, v means velocity, c means counterclockwise(1) or clockwise direction(0):
 ```
 ros2 run turtlesim turtlesim_node
-ros2 run my_first_ros2_pkg cmd_vel_publisher -r 2 -v 2 -c 1
-ros2 run my_first_ros2_pkg cmd_vel_subscriber 
+ros2 run uniform_circle_turtle rvd_publisher -r 2 -v 2 -c 1
+ros2 run uniform_circle_turtle rvd_subscriber 
 ```
-To run launch file, follow below:
+To run launch file, follow below at different terminal window:
 
 ```
-ros2 run turtlesim turtlesim_node
-cd ~/(your workspace)/src/my_first_ros2_pkg/launch
-ros2 launch cmd_to_twist.launch.py
+ros2 launch uniform_circle_turtle rvd_to_twist.launch.py
+ros2 topic pub --once /uniform_circular_velocity rvd_msg_example/msg/RVD "{ccwdirection: False, radius: 1.5, lin_vel: 5.0}"
 ```
 
