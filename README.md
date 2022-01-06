@@ -19,7 +19,7 @@ To see results, follow:
 ```
 git clone https://github.com/windust7/ROS_tutorial
 ```
-Move rvd_msg_example and uniform_circle_turtle folders to src folder(which is at your workspace)
+Move [rvd_msg_example](https://github.com/windust7/ROS_tutorial/tree/main/rvd_msg_example) and [uniform_circle_turtle] folders to src folder(which is at your workspace)
 
 ```
 cd ~/(your workspace)
