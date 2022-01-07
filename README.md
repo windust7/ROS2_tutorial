@@ -76,7 +76,7 @@ If you give 325 to pick_target, 325 = 0b101000101 and 1st, 3rd, 7th, and 9th gri
 * [Original Repository](https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/dynamic_window_approach.py)
 
 ### Problem
-I tried to make [launch file](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/launch/dwa_turtle.launch.py) but when I tried:
+I tried to make a [launch file](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/launch/dwa_turtle.launch.py) but when I tried:
 ```
 ros2 launch dwa_turtle dwa_turtle.launch.py
 ```
@@ -84,4 +84,4 @@ But the following error message appeared:
 
 [ERROR] [launch]: Caught exception in launch (see debug for traceback): __init__() missing 1 required keyword-only argument: 'node_executable'
 
-If someone found the reason or 
+If someone found the reason or solution, please let me know(via e-mail or etc,,)
