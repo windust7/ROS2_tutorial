@@ -65,7 +65,7 @@ At [config.yaml](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/p
 
 If you give 3 to num_target, there will be 3 * 3 = 9 grids.
 
-If you give 325 to pick_target, 325 = 0b101000101 and 1st, 3rd, 7th, and 9th grids will be targets. 
+If you give 325 to pick_target, 325 = 0b101000101 and 1st, 3rd, 7th, and 9th grids will be targets(Consider each digit in a binary number). 
 
 ### Citation([Dynamic Window Planner](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/dwa_turtle/dwa_planner.py))
 
