@@ -67,7 +67,7 @@ If you give 3 to num_target, there will be 3 * 3 = 9 grids.
 
 If you give 325 to pick_target, 325 = 0b101000101 and 1st, 3rd, 7th, and 9th grids will be targets. 
 
-### Citation([PythonRobotics/PathPlanning/DynamicWindowApproach]
+### Citation([Dynamic Window Planner](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/dwa_turtle/dwa_planner.py))
 
 * [Author - Atsushi Sakai](https://github.com/AtsushiSakai)
 * [Original Repository](https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/dynamic_window_approach.py)
