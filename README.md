@@ -55,7 +55,7 @@ cd ~/(your workspace)
 colcon build --symlink-install --packages-select dwa_turtle
 . ~/(your workspace)/install/local_setup.bash
 ```
-To run each nodes, follow below at different terminal window(r means radius, v means velocity, c means counterclockwise(1) or clockwise direction(0)):
+To run each nodes, follow below at different terminal window:
 ```
 ros2 run turtlesim turtlesim_node
 ros2 run dwa_turtle agent_spawner
