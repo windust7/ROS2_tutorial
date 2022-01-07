@@ -45,6 +45,9 @@ ros2 topic pub --once /uniform_circular_velocity rvd_msg_example/msg/RVD "{ccwdi
 ### Brief Description
 ![image](https://user-images.githubusercontent.com/62916482/148576671-307a83f6-638b-43f0-8e89-3644751406a8.png)
 
+### Requirements
+Ubuntu 18.04, ROS2 dashing version
+
 To see results, follow:
 ```
 git clone https://github.com/windust7/ROS_tutorial
