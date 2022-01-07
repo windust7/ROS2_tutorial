@@ -27,7 +27,7 @@ colcon build --symlink-install --packages-select rvd_msg_example
 colcon build --symlink-install --packages-select uniform_circle_turtle
 . ~/(your workspace)/install/local_setup.bash
 ```
-To run each nodes, follow below at different terminal window(r means radius, v means velocity, c means counterclockwise(1) or clockwise direction(0)):
+To run each nodes, follow below at different terminal window:
 ```
 ros2 run turtlesim turtlesim_node
 ros2 run uniform_circle_turtle rvd_publisher -r 2 -v 2 -c 1
