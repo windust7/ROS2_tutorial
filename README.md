@@ -44,7 +44,8 @@ ros2 topic pub --once /uniform_circular_velocity rvd_msg_example/msg/RVD "{ccwdi
 ## Second Example
 ### Brief Description
 ![image](https://user-images.githubusercontent.com/62916482/148576671-307a83f6-638b-43f0-8e89-3644751406a8.png)
-[/agent_spawner](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/dwa_turtle/agent_spawner.py) node spawn a new turtle(/agent). And original turtle(/turtle1) is obstacle and agent has to move to targets in order without bumping into the obstacle.
+
+[/agent_spawner](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/dwa_turtle/agent_spawner.py) node spawns a new turtle(/agent). An original turtle(/turtle1) is obstacle and [agent](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/dwa_turtle/dwa_planner.py) has to move to targets in order without bumping into the obstacle.
 
 ### Requirements
 Ubuntu 18.04, ROS2 dashing version
