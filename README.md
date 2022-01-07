@@ -80,7 +80,7 @@ I tried to make a [launch file](https://github.com/windust7/ROS_tutorial/blob/ma
 ```
 ros2 launch dwa_turtle dwa_turtle.launch.py
 ```
-But the following error message appeared:
+The following error message appeared:
 
 [ERROR] [launch]: Caught exception in launch (see debug for traceback): __init__() missing 1 required keyword-only argument: 'node_executable'
 
