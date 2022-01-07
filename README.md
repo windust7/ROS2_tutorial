@@ -40,3 +40,34 @@ ros2 launch uniform_circle_turtle rvd_to_twist.launch.py
 ros2 topic pub --once /uniform_circular_velocity rvd_msg_example/msg/RVD "{ccwdirection: False, radius: 1.5, lin_vel: 5.0}"
 ```
 
+
+## Second Example
+### Brief Description
+![image](https://user-images.githubusercontent.com/62916482/148576671-307a83f6-638b-43f0-8e89-3644751406a8.png)
+
+To see results, follow:
+```
+git clone https://github.com/windust7/ROS_tutorial
+```
+Move [dwa_turtle](https://github.com/windust7/ROS_tutorial/tree/main/dwa_turtle) folders to src folder(which is at your workspace)
+```
+cd ~/(your workspace)
+colcon build --symlink-install --packages-select dwa_turtle
+. ~/(your workspace)/install/local_setup.bash
+```
+To run each nodes, follow below at different terminal window(r means radius, v means velocity, c means counterclockwise(1) or clockwise direction(0)):
+```
+ros2 run turtlesim turtlesim_node
+ros2 run dwa_turtle agent_spawner
+ros2 run dwa_turtle dwa_planner __params:=(direction of config.yaml)
+```
+At [config.yaml](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/param/config.yaml), you can decide num_target, pick_target and etc.
+
+If you give 3 to num_target, there will be 3 * 3 = 9 grids.
+
+If you give 325 to pick_target, 325 = 0b101000101 and 1st, 3rd, 7th, and 9th grids will be targets. 
+
+### Citation([PythonRobotics/PathPlanning/DynamicWindowApproach]
+
+* [Author - Atsushi Sakai](https://github.com/AtsushiSakai)
+* [Original Repository](https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/dynamic_window_approach.py)
