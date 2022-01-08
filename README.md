@@ -80,7 +80,7 @@ If you give 325 to pick_target, 325 = 0b101000101 and 1st, 3rd, 7th, and 9th gri
 * [Original Repository](https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/dynamic_window_approach.py)
 
 ### Problem
-I tried to make a [launch file](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/launch/dwa_turtle.launch.py) but when I tried:
+I tried to run a [launch file](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/launch/dwa_turtle.launch.py) but when I tried:
 ```
 ros2 launch dwa_turtle dwa_turtle.launch.py
 ```
