@@ -27,7 +27,7 @@ class DWAPlanner(Node):
         self.num_target = self.get_parameter('num_target').value
         self.declare_parameter('pick_target', 325)
         self.pick_target = self.get_parameter('pick_target').value
-        self.declare_parameter('max_speed', 2.0)
+        self.declare_parameter('max_speed', 1.0)
         self.max_speed = self.get_parameter('max_speed').value
         self.declare_parameter('min_speed', -0.5)
         self.min_speed = self.get_parameter('min_speed').value
@@ -35,23 +35,23 @@ class DWAPlanner(Node):
         self.max_yaw_rate = self.get_parameter('max_yaw_rate').value
         self.declare_parameter('max_accel', 0.2)
         self.max_accel = self.get_parameter('max_accel').value
-        self.declare_parameter('max_delta_yaw_rate', 0.8)
+        self.declare_parameter('max_delta_yaw_rate', 0.69777)
         self.max_delta_yaw_rate = self.get_parameter('max_delta_yaw_rate').value
         self.declare_parameter('v_resolution', 0.01)
         self.v_resolution = self.get_parameter('v_resolution').value
         self.declare_parameter('yaw_rate_resolution', 0.0017444)
         self.yaw_rate_resolution = self.get_parameter('yaw_rate_resolution').value
-        self.declare_parameter('dt', 0.2)
+        self.declare_parameter('dt', 0.1)
         self.dt = self.get_parameter('dt').value
-        self.declare_parameter('predict_time', 4.0)
+        self.declare_parameter('predict_time', 3.0)
         self.predict_time = self.get_parameter('predict_time').value
-        self.declare_parameter('to_goal_cost_gain', 2.0)
+        self.declare_parameter('to_goal_cost_gain', 0.15)
         self.to_goal_cost_gain = self.get_parameter('to_goal_cost_gain').value
         self.declare_parameter('speed_cost_gain', 1.0)
         self.speed_cost_gain = self.get_parameter('speed_cost_gain').value
-        self.declare_parameter('obstacle_cost_gain', 0.5)
+        self.declare_parameter('obstacle_cost_gain', 1.0)
         self.obstacle_cost_gain = self.get_parameter('obstacle_cost_gain').value
-        self.declare_parameter('robot_stuck_flag_cons', 0.1)
+        self.declare_parameter('robot_stuck_flag_cons', 0.001)
         self.robot_stuck_flag_cons = self.get_parameter('robot_stuck_flag_cons').value
         self.declare_parameter('robot_type', 0)
         self.robot_type = self.get_parameter('robot_type').value
@@ -116,7 +116,7 @@ class DWAPlanner(Node):
             '/agent/cmd_vel',
             QOS_RKL10V)
 
-        self.timer = self.create_timer(self.dt, self.publish_twist_msg)
+        # self.timer = self.create_timer(self.dt, self.publish_twist_msg)
 
     def publish_twist_msg(self):
         self.lin_vec = Vector3()
