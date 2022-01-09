@@ -19,10 +19,10 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
-            #DeclareLaunchArgument(
-            #    'param_dir',
-            #    default_value=param_dir,
-            #    description='Full path of parameter file'),
+            DeclareLaunchArgument(
+                'param_dir',
+                default_value=param_dir,
+                description='Full path of parameter file'),
             Node(
                 package='turtlesim',
                 node_executable='turtlesim_node',
