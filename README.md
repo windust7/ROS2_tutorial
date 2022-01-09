@@ -64,11 +64,11 @@ colcon build --symlink-install --packages-select dwa_turtle
 ```
 To run each nodes, follow below at different terminal window.
 
-  -x means initial x coordinate of /agent, -y means initial y coordinate of /agent, -t means initial theta of /agent. 
+  * -x means initial x coordinate of /agent, -y means initial y coordinate of /agent, -t means initial theta of /agent. 
 
-  If you don't give x, y, t or direction of .yaml file, default values are given.
+  * If you don't give x, y, t or direction of .yaml file, default values are given.
 
-  If you give .yaml file's directory, you have to run last line at your workspace.
+  * If you give .yaml file's directory, you have to run last line at your workspace.
 ```
 ros2 run turtlesim turtlesim_node
 ros2 run dwa_turtle agent_spawner -x 1.0 -y 1.0 -t 0.0
