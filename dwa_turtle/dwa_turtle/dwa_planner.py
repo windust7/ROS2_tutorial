@@ -55,8 +55,8 @@ class DWAPlanner(Node):
         self.robot_stuck_flag_cons = self.get_parameter('robot_stuck_flag_cons').value
         self.declare_parameter('robot_type', 0)
         self.robot_type = self.get_parameter('robot_type').value
-
-        self.goal_tolerance = 0.5
+        self.declare_parameter('goal_tolerance', 0.5)
+        self.goal_tolerance = self.get_parameter('goal_tolerance').value
 
         self.declare_parameter('qos_depth', 10)
         qos_depth = self.get_parameter('qos_depth').value
@@ -177,6 +177,8 @@ class DWAPlanner(Node):
                 self.robot_stuck_flag_cons = param.value
             elif param.name == 'robot_type' and param.type_ == Parameter.Type.INTEGER:
                 self.robot_type = param.value
+            elif param.name == 'goal_tolerance':
+                self.goal_tolerance = param.value
         return SetParametersResult(successful=True)
 
     def motion(self, x, u, dt):

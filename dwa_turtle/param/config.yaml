@@ -17,3 +17,4 @@
     obstacle_cost_gain : 1.0
     robot_stuck_flag_cons : 0.001  # constant to prevent robot stucked
     robot_type : 0 # 0 for circle, 1 for rectangle
+    goal_tolerance : 0.5
