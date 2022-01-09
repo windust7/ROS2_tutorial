@@ -62,11 +62,17 @@ cd ~/(your workspace)
 colcon build --symlink-install --packages-select dwa_turtle
 . ~/(your workspace)/install/local_setup.bash
 ```
-To run each nodes, follow below at different terminal window:
+To run each nodes, follow below at different terminal window.
+
+  -x means initial x coordinate of /agent, -y means initial y coordinate of /agent, -t means initial theta of /agent. 
+
+  If you don't give x, y, t or direction of .yaml file, default values are given.
+
+  If you give .yaml file's directory, you have to run last line at your workspace.
 ```
 ros2 run turtlesim turtlesim_node
-ros2 run dwa_turtle agent_spawner
-ros2 run dwa_turtle dwa_planner __params:=(direction of config.yaml)
+ros2 run dwa_turtle agent_spawner -x 1.0 -y 1.0 -t 0.0
+ros2 run dwa_turtle dwa_planner __params:=src/dwa_turtle/param/config.yaml
 ```
 At [config.yaml](https://github.com/windust7/ROS_tutorial/blob/main/dwa_turtle/param/config.yaml), you can decide num_target, pick_target and etc.
 
