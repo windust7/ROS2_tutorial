@@ -323,6 +323,7 @@ class DWAPlanner(Node):
         u, trajectory = self.calc_control_and_trajectory(x, dw, goal, ob)
 
         self.x = trajectory[1]
+        [self.x[3], self.x[4]] = u
         self.publish_twist_msg()
 
         return u, trajectory
