@@ -95,3 +95,5 @@ The following error message appeared:
 [ERROR] [launch]: Caught exception in launch (see debug for traceback): ``__init__()`` missing 1 required keyword-only argument: 'node_executable'
 
 If someone find the reason or solution, please let me know(via e-mail or etc,,)
+
+(Looks like my local environment is something wrong,, Maybe you will be able to run the launch file without that error message)
